@@ -1,0 +1,27 @@
+.header {
+  background-color: #002855;
+  padding: 10px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titlee {
+  margin: 10px;
+}
+.user{ 
+  display: flex; 
+  align-items: center 
+}
+.name{
+  margin-right: 10px;
+}
+
+.img{ 
+  margin-right: 30px;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 
+}
