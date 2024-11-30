@@ -1,60 +1,102 @@
 import React from 'react'
 import './style.css'
+import { Select } from '../input-select/Select'
+import { Button } from '../button/Button';
+import { Input } from '../input/Input';
 
 export const Form = ({ texto }) => {
+  const [empresa, setEmpresa] = React.useState('');
+  const [plano, setPlano] = React.useState('');
   return (
 
-    <form action="" className="containerform">
-  <h2>{texto}</h2>
-  <fieldset>
-    <section className="form-section-1">
-      {/* Empresa */}
-      <div className="form-group">
-        <label htmlFor="empresa">Empresa</label>
-        <select name="empresa" id="empresa" required>
-          <option value="">Selecione uma empresa</option>
-          <option value="empresa1">Empresa 1</option>
-          <option value="empresa2">Empresa 2</option>
-          <option value="empresa3">Empresa 3</option>
-        </select>
-      </div>
+    <form className="containerform">
+      <h2>{texto}</h2><br />
+      <fieldset className='fieldset'>
+        <section className="form-section-1">
+          <Select
+            label="Empresa"
+            id="empresa"
+            value=""
+            onChange={(e) => {
+              setEmpresa(e.target.value)
+            }}
+            options={[
+              { value: 'empresa1', label: 'empresa 1' },
+              { value: 'empresa2', label: 'empresa 2' },
+              { value: 'empresa3', label: 'empresa 3' },
+            ]} placeholder="Selecione um plano" />
 
-      {/* Plano */}
-      <div className="form-group">
-        <label htmlFor="plano">Plano</label>
-        <select name="plano" id="plano" required>
-          <option value="">Selecione um plano</option>
-          <option value="plano1">Plano 1</option>
-          <option value="plano2">Plano 2</option>
-          <option value="plano3">Plano 3</option>
-        </select>
-      </div>
-
-      {/* Centro de Custo */}
-      <div className="form-group">
-        <label htmlFor="centro-de-custo">Centro de Custo</label>
-        <select name="centroDeCusto" id="centro-de-custo" required>
-          <option value="">Selecione um centro de custo</option>
-          <option value="centro1">Centro 1</option>
-          <option value="centro2">Centro 2</option>
-          <option value="centro3">Centro 3</option>
-        </select>
-      </div>
-    </section>
-
-    {/* Datas */}
-    <section className="form-section-2">
-      <div className="form-group">
-        <label htmlFor="data-inicial">Mês/Ano Inicial</label>
-        <input type="month" name="dataInicial" id="data-inicial" required />
-      </div>
-      <div className="form-group">
-        <label htmlFor="data-final">Mês/Ano Final</label>
-        <input type="month" name="dataFinal" id="data-final" required />
-      </div>
-    </section>
-  </fieldset>
-</form>
+          <Select
+            label="Plano"
+            id="plano"
+            value=""
+            onChange={(e) => {
+              setPlano(e.target.value)
+            }}
+            options={[
+              { value: 'plano1', label: 'Plano 1' },
+              { value: 'plano2', label: 'Plano 2' },
+              { value: 'plano3', label: 'Plano 3' },
+            ]} placeholder="Selecione um plano" />
+          <Select
+            label="Centro de custo"
+            id="Centro de custo"
+            value=""
+            onChange={(e) => {
+              setPlano(e.target.value)
+            }} options={[
+              { value: 'centro1', label: 'centro 1' },
+              { value: 'centro2', label: 'centro 2' },
+              { value: 'centro3', label: 'centro 3' },
+            ]} placeholder="Selecione o custo" />
+        </section>
+        <section className="form-section-2">
+          <Input
+            type="month"
+            id="inicial"
+            label="Mês/Ano inicial" />
+          <Input
+            type="month"
+            id="final"
+            label="Mês/Ano Final" />
+        </section>
+        <section className="form-section-3">
+          <label htmlFor="saldoAnterior">Saldo Anterior</label>
+          <div>
+            <span>Sim</span>
+            <Input
+              type="radio"
+              value="Sim"
+              id="saldo"
+              name='saldo'
+            />
+            <span>Não</span>
+            <Input
+              type="radio"
+              value="Não"
+              id="saldo"
+              name='saldo' />
+          </div>
+          <label htmlFor="saldoAnterior">Acumulado</label>
+          <div>
+            <span>Sim</span>
+            <Input
+              type="radio"
+              value="Sim"
+              id="acumulado"
+              name='acumulado'
+            />
+            <span>Não</span>
+            <Input
+              type="radio"
+              value="Não"
+              id="acumulado"
+              name='acumulado' />
+          </div>
+        </section>
+        <Button value="Filtrar" />
+      </fieldset>
+    </form>
 
 
   )
