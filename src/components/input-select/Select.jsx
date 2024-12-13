@@ -3,7 +3,7 @@ import './style.css'
 
 export const Select = ({ label, id, value, onChange, options, placeholder }) => {
   return (
-    <>
+    <div>
       <label htmlFor={id}>{label}</label>
       <select className="input-select"
         id={id}
@@ -17,6 +17,6 @@ export const Select = ({ label, id, value, onChange, options, placeholder }) => 
           </option>
         ))}
       </select>
-    </>
+    </div>
   )
 }

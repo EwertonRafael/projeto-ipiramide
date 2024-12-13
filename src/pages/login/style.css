@@ -4,9 +4,9 @@
   justify-content: center;
   flex-direction: column;
   height: 100vh;
-  background-color: #ccc;
-  color: #000;
-  font-family: Arial, sans-serif;
+  background-color: #F1F1F1;
+  color: #32343A;
+  font-family: "Roboto", sans-serif;
   text-align: center;
   margin: 0;
 }
@@ -17,20 +17,22 @@
 
 p {
   margin: 20px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 11px;
 }
 
 form{
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-  margin-right: 250px;
+  display: flex;
+  align-self: flex-start;
   margin-bottom: 5px;
-  font-weight: 600;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 16px;
 
 }
 
@@ -41,4 +43,3 @@ input {
   border: none;
   min-width: 300px;
 }
-

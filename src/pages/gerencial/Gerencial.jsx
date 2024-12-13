@@ -12,15 +12,20 @@ export const Gerencial = () => {
 
     return (
         <main>
-            <Header title="PIRAMIDE 360" />
+            <Header title="PIRÂMIDE 360" />
+            
             <div className="container">
-                <Sidebar />
+            <Sidebar />
+            <div className='container-form'>
                 <Form>
-                    <h1>Gerencial</h1>
+                    <div className='container-form-header'>
+                        <h1>Gerencial</h1>
+                        <span>Preenchimento obrigatório</span>
+                    </div>
 
                     <fieldset className="fieldset">
                         <div className="gerencial-selects">
-                            <div>
+                            
                                 <Select
                                     label="Empresa"
                                     id="empresa"
@@ -31,8 +36,8 @@ export const Gerencial = () => {
                                     ]}
                                     placeholder="Selecione uma empresa"
                                 />
-                            </div>
-                            <div>
+                            
+                            
 
                                 <Select
                                     label="Plano"
@@ -44,8 +49,8 @@ export const Gerencial = () => {
                                     ]}
                                     placeholder="Selecione um plano"
                                 />
-                            </div>
-                            <div>
+                            
+                            
 
                                 <Select
                                     label="Centro de custo"
@@ -57,7 +62,7 @@ export const Gerencial = () => {
                                     ]}
                                     placeholder="Selecione o centro de custo"
                                 />
-                            </div>
+                            
                         </div>
                         <div className="gerencial-date">
                             <InputDate
@@ -78,6 +83,7 @@ export const Gerencial = () => {
 
                     <Button  value="Demonstrativo" />
                 </Form>
+            </div>
             </div>
         </main>
     );

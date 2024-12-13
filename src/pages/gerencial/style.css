@@ -1,5 +1,24 @@
+
 .container {
+  width: 100%;
+  height: 100%;
+  background-color: #F1F1F1;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  gap: 1rem;
+}
+
+.container-form{
+  margin-top: 40px;
+  width: 100%;
+}
+
+.container-form-header{
+  width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .gerencial-selects {
@@ -10,12 +29,11 @@
 }
 
 .fieldset {
+  width: 100%;
   padding: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid #D1D1D1;
   border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  background-color: #ffffff;
 }
 
 
@@ -24,4 +42,44 @@ select:focus {
   border-color: #007bff;
   outline: none;
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+
+@media only screen and (max-width: 800px){
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #F1F1F1;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+.gerencial-date{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+}
+
+  .gerencial-selects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fieldset {
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+
 }

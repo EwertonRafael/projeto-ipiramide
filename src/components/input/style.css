@@ -1,4 +1,22 @@
 .input{
-  margin-bottom: 10px;
-  border: #ddd solid 1px;
+  margin-bottom: 12px;
+  border: #BFC4D7 solid 1px;
+  padding: 20px 30px;
+}
+
+.input::placeholder{
+  color: #ABADB5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 800px){
+
+  .input{
+    padding: 20px ;
+    display: flex;
+    justify-content: center;
+    justify-self: auto;
+  }
+
 }
