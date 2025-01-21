@@ -1,4 +1,5 @@
 .containerform {
+  width: 100%;
   padding: 20px;
   margin: 0 30px;
   border: 1px solid #ddd;
@@ -8,9 +9,13 @@
 
 @media only screen and (max-width: 800px){
   .containerform{
+    background-color: #F1F1F1;
+    border: none;
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
+    margin: 0;
   }
 }

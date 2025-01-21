@@ -8,7 +8,7 @@ import { ChevronRight } from 'lucide-react';
 
 export const Autorizacoes = () => {
   return (
-    <main>
+    <main className='main'>
       <Header title="PIRÂMIDE 360" />
       
       <div className="container">

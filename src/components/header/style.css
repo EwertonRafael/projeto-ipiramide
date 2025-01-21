@@ -1,6 +1,6 @@
 .header {
   background-color: #002855;
-  padding: 10px 20px;
+  padding: 5px 20px;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -31,9 +31,13 @@
   border-radius: 50% 
 }
 
+.title-form{
+  display: none;
+}
+
 @media only screen and (max-width: 800px){
 
-  .header {
+  /* .header {
     background-color: #002855;
     padding: 10px 20px;
     color: #fff;
@@ -42,6 +46,28 @@
     align-items: center;
     width: 100%;
     z-index: 10;
+  } */
+
+  .header{
+    background-color: #002855;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .img, .name, .user, .titlee{
+    display: none;
+  }
+
+  .title-form{
+    display: flex;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
   }
 
 }

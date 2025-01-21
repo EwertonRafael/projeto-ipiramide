@@ -11,81 +11,100 @@ import './style.css'
 export const Gerencial = () => {
 
     return (
-        <main>
-            <Header title="PIRÂMIDE 360" />
+        
+        <main className='main'>
+            <Header className='header' title="PIRÂMIDE 360" titleForm='Gerencial' />
             
-            <div className="container">
-            <Sidebar />
-            <div className='container-form'>
-                <Form>
-                    <div className='container-form-header'>
-                        <h1>Gerencial</h1>
-                        <span>Preenchimento obrigatório</span>
-                    </div>
-
-                    <fieldset className="fieldset">
-                        <div className="gerencial-selects">
-                            
-                                <Select
-                                    label="Empresa"
-                                    id="empresa"
-                                    options={[
-                                        { value: 'empresa1', label: 'Empresa 1' },
-                                        { value: 'empresa2', label: 'Empresa 2' },
-                                        { value: 'empresa3', label: 'Empresa 3' },
-                                    ]}
-                                    placeholder="Selecione uma empresa"
-                                />
-                            
-                            
-
-                                <Select
-                                    label="Plano"
-                                    id="plano"
-                                    options={[
-                                        { value: 'plano1', label: 'Plano 1' },
-                                        { value: 'plano2', label: 'Plano 2' },
-                                        { value: 'plano3', label: 'Plano 3' },
-                                    ]}
-                                    placeholder="Selecione um plano"
-                                />
-                            
-                            
-
-                                <Select
-                                    label="Centro de custo"
-                                    id="centroDeCusto"
-                                    options={[
-                                        { value: 'centro1', label: 'Centro 1' },
-                                        { value: 'centro2', label: 'Centro 2' },
-                                        { value: 'centro3', label: 'Centro 3' },
-                                    ]}
-                                    placeholder="Selecione o centro de custo"
-                                />
-                            
+            <div className="container-gerencial">
+                <Sidebar />
+                <div className='container-form'>
+                    <Form>
+                        <div className='container-form-header'>
+                            <h1>Gerencial</h1>
+                            <span className='span-header'>Preenchimento obrigatório</span>
                         </div>
-                        <div className="gerencial-date">
-                            <InputDate
-                                texto="Mês/Ano"
-                                type="month"
-                                id="data"
-                                label="Data" />
-                        </div>
-                        <div>
-                            <InputRadio 
-                                type="radio" 
-                                label="Saldo Anterior" value="sim" 
-                                name="saldo anterior" texto="Sim" />
-                            <InputRadio 
-                                type="radio" label="Acumulado" value="nao" name="acumulado" texto="Nao" />
-                        </div>
-                    </fieldset>
 
-                    <Button  value="Demonstrativo" />
-                </Form>
+                        <fieldset className="fieldset">
+                            <div className="gerencial-selects">
+                                
+                                    <Select className='select' label="Empresa" id="empresa" placeholder="Selecione uma empresa"
+                                        options={[
+                                            { value: 'empresa1', label: 'Empresa 1' },
+                                            { value: 'empresa2', label: 'Empresa 2' },
+                                            { value: 'empresa3', label: 'Empresa 3' },
+                                        ]}/>
+
+                                    <Select className='select' label="Plano" id="plano" placeholder="Selecione um plano"
+                                        options={[
+                                            { value: 'plano1', label: 'Plano 1' },
+                                            { value: 'plano2', label: 'Plano 2' },
+                                            { value: 'plano3', label: 'Plano 3' },
+                                        ]}/>
+
+                                    <Select className='select' label="Centro de custo" id="centroDeCusto" placeholder="Selecione o centro de custo"
+                                        options={[
+                                            { value: 'centro1', label: 'Centro 1' },
+                                            { value: 'centro2', label: 'Centro 2' },
+                                            { value: 'centro3', label: 'Centro 3' },
+                                        ]}/>
+                                
+                            </div>
+                            
+                            <div className='sub-fieldset'>
+
+                                <div className="gerencial-date">
+                                    <InputDate texto="Mês/Ano" type="month" id="data" label="Data" />
+                                </div>
+                                
+                            
+                                <div className='sub-container-input'>
+                                    <label>Saldo Anterior</label>
+                                        <div className='input-radio-form'>
+                                            <InputRadio className="input-radio"/>
+                                        </div>
+                                    </div>
+
+                                    <div className='sub-container-input'>
+                                        <label>Acumulado</label>
+                                        <div className='input-radio-form'> 
+                                            <InputRadio className="input-radio"/>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                    
+                                
+
+                            
+                            
+                            <div className='input-checkbox-container'>
+                                <div className='input-checkbox'>
+                                    <span>Saldo anterior</span>
+                                    <label className="switch">
+                                        <input type="checkbox"/>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                                <div className='input-checkbox'>
+                                    <span>Acumulados</span>
+                                    <label className="switch">
+                                        <input type="checkbox"/>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <Button value="Demonstrativo" />
+                    </Form>
+                    
+                </div>
+
+                
             </div>
-            </div>
+            
         </main>
+        
     );
 };
 

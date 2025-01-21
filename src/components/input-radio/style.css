@@ -1,9 +1,51 @@
-.input-radio{
-  border: 1px solid #ddd;
-  border-radius: 4px;
+
+.input-radio {
+  width: 280px;
+  display: flex;
+  justify-content: right;
+  justify-items: center;
   cursor: pointer;
-  /* width: 50%; */
   box-sizing: content-box;
-  word-break: break-all;
+  gap: 10px;
+} 
+
+.sub-container-input{
+  display: flex;
+  flex-direction: row;
 }
 
+.input{
+  border: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  color: #919191;
+  font-size: 12px;
+}
+
+.input:first-child{
+  border-radius: 4px 0 0 4px;
+}
+.input:last-child{
+  border-radius: 0 4px 4px 0;
+}
+
+
+@media only screen and (max-width: 800px){
+  .sub-container-input label{
+    display: none;
+  }
+
+  .input-radio{
+    display: none;
+    width: 300px;
+    padding: 12px 0px ;
+    display: flex;
+    justify-content: center;
+  }
+
+
+}

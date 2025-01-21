@@ -2,24 +2,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 12px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #0056A4;
+  min-width: 280px;
+  height: 40px;
 }
+.container-select select {
+  appearance: none;
+  background: url('https://img.icons8.com/?size=15&id=85502&format=png&color=525252') 95.5% 50% no-repeat;
+  padding: 0 10px;
+  color: #0056A4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-select option{
+  color: #111111;
+}
+
 
 @media only screen and (max-width: 800px){
   
   
   .input-select {
+    width: 350px;
+    height: 50px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-items: center;
     justify-content: center;
-    padding: 22px 12px;
+    align-items: center;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
   }
+  
+  .container-select select{
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
 
 }

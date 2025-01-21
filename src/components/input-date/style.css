@@ -1,11 +1,54 @@
-.date-range-inputs{
+.date-range-inputs {
   display: flex;
-  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  max-width: 50%;
+  
+}
+
+.input-date input{
+  min-width: 100px !important;
+  gap: 20px !important;
+  min-height: 40px !important;
+  padding: 0 auto;
+}
+
+
+.date-container{
+  width: 17.5rem;
 }
 
 @media only screen and (max-width: 800px){
-  .date-range-inputs{
+
+  .date-range-inputs input{
+    min-width: 100% !important;
+    min-height: 50px;
+  }
+  
+  .date-container{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+  .date-range-inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    min-width: 100%!important;
+    gap: 2px;
+  }
+  .input-date input{
+    min-width: 100px !important;
+    gap: 20px;
+  }
+  .input-checkbox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
