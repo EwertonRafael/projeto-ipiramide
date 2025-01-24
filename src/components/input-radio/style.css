@@ -14,7 +14,7 @@
   flex-direction: row;
 }
 
-.input{
+.sub-input-radio{
   border: 1px solid #ddd;
   height: 40px;
   display: flex;
@@ -26,10 +26,10 @@
   font-size: 12px;
 }
 
-.input:first-child{
+.sub-input-radio:first-child{
   border-radius: 4px 0 0 4px;
 }
-.input:last-child{
+.sub-input-radio:last-child{
   border-radius: 0 4px 4px 0;
 }
 

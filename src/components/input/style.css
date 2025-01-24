@@ -1,7 +1,10 @@
 .input{
   margin-bottom: 12px;
   border: #BFC4D7 solid 1px;
-  padding: 20px 30px;
+  width: 380px;
+  padding: 15px 10px;
+  border-radius: 4px;
+  outline: 0;
 }
 
 
@@ -10,7 +13,7 @@
 
   .input{
     width: 300px;
-    padding: 20px 0px ;
+    height: 52px;
     display: flex;
     justify-content: center;
   }
