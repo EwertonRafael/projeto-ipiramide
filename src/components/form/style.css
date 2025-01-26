@@ -1,9 +1,21 @@
 .containerform {
   width: 100%;
-  margin: 30px;
   padding: 20px;
+  margin: 0 30px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f9f9f9;
-  height: fit-content;
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 800px){
+  .containerform{
+    background-color: #F1F1F1;
+    border: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+  }
 }

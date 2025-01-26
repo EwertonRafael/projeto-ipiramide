@@ -3,6 +3,7 @@ import React from 'react';
 import './style.css';
 import { Button } from '../../components/button/Button';
 import { Input } from '../../components/input/Input';
+import { Eye } from 'lucide-react';
 
 export const Login = () => {
   const [form, setForm] = React.useState({
@@ -45,15 +46,20 @@ export const Login = () => {
             value={form.user}
             onChange={handleForm}
           />
-          <Input
-            type="password"
-            placeholder="Selecione sua senha"
-            id="password"
-            label="Senha"
-            name="password"
-            value={form.password}
-            onChange={handleForm}
-          />
+          <label>Senha</label>
+          <div className='input-pass'>
+
+            <input
+              type="password"
+              placeholder="Selecione sua senha"
+              id="password"
+              label="Senha"
+              name="password"
+              value={form.password}
+              onChange={handleForm}
+            />
+            <button className='btn-view-pass'><Eye color='#c4c4c4'/></button>
+          </div>
           <Button value="Entrar" type="submit" />
         </form>
       </section>

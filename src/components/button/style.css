@@ -1,10 +1,13 @@
 .button {
-  width: 150px;
-  margin-left: 70px;
-  padding: 10px 20px;
+  width: 180px;
+  padding: 18px ;
   border-radius: 5px;
   border: none;
-  background-color: #0d33f1;
+  background-color: #0056A4;
   color: #fff;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 20px;
 }
